@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Где поесть в Перми / Where to Eat in Perm</title>
+  
+  <!-- ===== СТИЛИ ===== -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="C:\Users\user\vsc\практика\images\favicon.ico">
+</head>
+<body>
+
+<header role="banner">
+    <nav class="container nav">
+        <div class="logo">
+         <i class="fas fa-utensils"></i> PermEat
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+        <a href="#home" data-lang="ru">Главная</a>
+        <a href="#home" data-lang="en">Home</a>
+        <a href="#places" data-lang="ru">Где поесть</a>
+        <a href="#places" data-lang="en">Places</a>
+        <a href="#tips" data-lang="ru">Советы</a>
+        <a href="#tips" data-lang="en">Tips</a>
+        <button class="lang-toggle" id="langToggle"><i class="fas fa-globe"></i> EN</button>
+        </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+  <!-- ===== HOME ===== -->
+  <section id="home">
+    <div class="container home-grid">
+      <div class="home-text">
+        <h1 data-lang="ru">🍜 Где поесть студенту в Перми?</h1>
+        <h1 data-lang="en">🍜 Where to eat in Perm on a student budget?</h1>
+        <p class="lead" data-lang="ru">Карта вкусных и бюджетных мест рядом с ПНИПУ, проверенных нами лично.</p>
+        <p class="lead" data-lang="en">A map of tasty and affordable spots near PNRPU, tested by ourselves.</p>
+
+        <p data-lang="ru" style="font-weight:500; margin-bottom:12px;">⭐ Наши фавориты:</p>
+        <p data-lang="en" style="font-weight:500; margin-bottom:12px;">⭐ Our favourites:</p>
+
+        <ul class="fav-list">
+          <li data-lang="ru"><i class="fas fa-check-circle"></i> «Китайская столовая» (Ленина, 76) – повара из Китая, огромные порции</li>
+          <li data-lang="en"><i class="fas fa-check-circle"></i> «Chinese Canteen» (Lenina, 76) – chefs from China, huge portions</li>
+          <li data-lang="ru"><i class="fas fa-check-circle"></i> Кафе «Ларена» (Комсомольский пр., 38) – тунисская шаурма и маклюбе</li>
+          <li data-lang="en"><i class="fas fa-check-circle"></i> Cafe «Larena» (Komsomolsky, 38) – Tunisian shawarma & maklyube</li>
+          <li data-lang="ru"><i class="fas fa-check-circle"></i> Хинкальная «Мимино» (Луньевская, 4) – хинкали и хачапури как в Тбилиси</li>
+          <li data-lang="en"><i class="fas fa-check-circle"></i> Khinkalnaya «Mimino» (Lunyevskaya, 4) – khinkali & khachapuri like in Tbilisi</li>
+          <li data-lang="ru"><i class="fas fa-check-circle"></i> Столовая «Минутка» (Луначарского, 3А) – самая дружелюбная столовая</li>
+          <li data-lang="en"><i class="fas fa-check-circle"></i> Canteen «Minutka» (Lunacharskogo, 3А) – the friendliest canteen</li>
+        </ul>
+
+        <a href="#places" class="btn-primary" data-lang="ru">Смотреть все места →</a>
+        <a href="#places" class="btn-primary" data-lang="en">See all places →</a>
+      </div>
+      
+   
+      <div class="home-image">
+        <img 
+          src="images/home-photo.jpg" 
+          alt="Где поесть в Перми" 
+          style="width: 100%; height: 100%; object-fit: cover; border-radius: 34px;"
+        >
+      </div>
+      <!-- ==================================== -->
+      
+    </div>
+  </section>
+
+  <!-- ===== PLACES ===== -->
+  <section id="places">
+    <div class="container">
+      <h2 class="section-title" data-lang="ru"><i class="fas fa-map-pin"></i> Топ бюджетных мест рядом с ПНИПУ</h2>
+      <h2 class="section-title" data-lang="en"><i class="fas fa-map-pin"></i> Top Budget Places Near PNRPU</h2>
+      <p class="section-sub" data-lang="ru">Мы, студенты ПНИПУ, собрали для вас проверенные заведения в шаговой доступности от вуза.</p>
+      <p class="section-sub" data-lang="en">We, PNRPU students, have gathered verified spots within walking distance of the university.</p>
+
+      <div class="places-grid" id="placesGrid">
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ===== TIPS ===== -->
+  <section id="tips">
+    <div class="container">
+      <h2 class="section-title" data-lang="ru"><i class="fas fa-lightbulb"></i> Советы по экономии</h2>
+      <h2 class="section-title" data-lang="en"><i class="fas fa-lightbulb"></i> Money‑Saving Tips</h2>
+      <div class="tips-list">
+        <div class="tip-item">
+          <i class="fas fa-utensils"></i>
+          <h4 data-lang="ru">Готовьте сами</h4>
+          <h4 data-lang="en">Cook yourself</h4>
+          <p data-lang="ru">В общежитиях есть кухни – это дешевле и полезнее.</p>
+          <p data-lang="en">Dormitories have kitchens – cheaper and healthier.</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-id-card"></i>
+          <h4 data-lang="ru">Студенческие скидки</h4>
+          <h4 data-lang="en">Student discounts</h4>
+          <p data-lang="ru">Всегда спрашивайте о скидках по студенческому билету.</p>
+          <p data-lang="en">Always ask for student discounts with your ID.</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-clock"></i>
+          <h4 data-lang="ru">Бизнес-ланчи</h4>
+          <h4 data-lang="en">Business lunches</h4>
+          <p data-lang="ru">Комплексные обеды днём часто дешевле, чем отдельные блюда.</p>
+          <p data-lang="en">Set lunch menus are often cheaper than à la carte.</p>
+        </div>
+        <div class="tip-item">
+          <i class="fas fa-gift"></i>
+          <h4 data-lang="ru">Бесплатное питание</h4>
+          <h4 data-lang="en">Free meals</h4>
+          <p data-lang="ru">Узнайте в вузе, можете ли вы получать бесплатное питание (льготные категории).</p>
+          <p data-lang="en">Check if you qualify for free meals (low‑income, large families, etc.).</p>
+        </div>
+      </div>
+      <div class="price-table">
+        <h4 data-lang="ru">💰 Ориентировочные цены в Перми</h4>
+        <h4 data-lang="en">💰 Approximate Prices in Perm</h4>
+        <p data-lang="ru">🍽 Обед в недорогом ресторане: 400–1500 ₽</p>
+        <p data-lang="en">🍽 Lunch at an inexpensive restaurant: 400–1500 RUB</p>
+        <p data-lang="ru">🏫 Средний чек в столовой: 160–300 ₽</p>
+        <p data-lang="en">🏫 Average bill at a canteen: 160–300 RUB</p>
+        <p data-lang="ru">🛒 Продукты на месяц: ~9 000 – 19 000 ₽</p>
+        <p data-lang="en">🛒 Monthly groceries: ~9 000 – 19 000 RUB</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p data-lang="ru">© 2026 PermEat – сделано студентами ПНИПУ для студентов ❤️</p>
+    <p data-lang="en">© 2026 PermEat – made by PNRPU students for students ❤️</p>
+  </div>
+</footer>
+
+<script>
+  // ----- Данные о заведениях (ru / en) -----
+  const placesData = [
+    {
+      name_ru: 'Кафе «Ларена»',
+      name_en: 'Cafe «Larena»',
+      images: [
+    "images/larena2.jpg",
+    "images/larena3.jpg",
+    "images/larena1.jpg"
+],
+      address_ru: 'Комсомольский пр., 38',
+      address_en: '38 Komsomolskiy Prospekt',
+      desc_ru: 'Уютное кафе с тунисской и итальянской кухней. Попробуйте шаурму, пиццу, маклюбе. Доставка и самовывоз через приложение.',
+      desc_en: 'Cozy cafe with Tunisian & Italian cuisine. Try shawarma, pizza, maklyube. Delivery & pickup via app.',
+      price_ru: '~300–600 ₽',
+      price_en: '~300–600 RUB',
+      hours_ru: 'Пн–Сб 10:00–23:00, Вс 12:00–23:00',
+      hours_en: 'Mon–Sat 10:00–23:00, Sun 12:00–23:00'
+    },
+
+    {
+      name_ru: '«Китайская столовая»',
+      name_en: '«Chinese Canteen»',
+      images: [
+    "images/lenina ch stolovaya1.jpg",
+    "images/lenina ch stolovaya2.jpg",
+    "images/lenina ch stolovaya3.jpg"
+],
+      address_ru: 'ул. Ленина, 76',
+      address_en: '76 Lenina St.',
+      desc_ru: 'Настоящая китайская кухня от поваров из Поднебесной. Большие порции, насыщенные вкусы.',
+      desc_en: 'Authentic Chinese cuisine by chefs from China. Large portions, rich flavours.',
+      price_ru: '~200–400 ₽',
+      price_en: '~200–400 RUB',
+      hours_ru: 'Уточняйте на месте',
+      hours_en: 'Check on‑site'
+    },
+
+    {
+      name_ru: 'Хинкальная «Мимино»',
+      name_en: 'Khinkalnaya «Mimino»',
+      images: [
+    "images/mimino1.jpg",
+    "images/mimino2.jpg"
+],
+      address_ru: 'ул. Луньевская, 4',
+      address_en: '4 Lunyevskaya St.',
+      desc_ru: 'Грузинская, армянская и русская кухня. Хинкали, хачапури, шашлык, осетинские пироги. Wi‑Fi, доставка.',
+      desc_en: 'Georgian, Armenian & Russian cuisine. Khinkali, khachapuri, shashlik, Ossetian pies. Wi‑Fi, delivery.',
+      price_ru: '~800 ₽ (средний чек)',
+      price_en: '~800 RUB (avg. bill)',
+      hours_ru: 'Уточняйте на месте',
+      hours_en: 'Check on‑site'
+    },
+
+    {
+      name_ru: 'Кафе «Узбечка»',
+      name_en: 'Cafe «Uzbechka»',
+      images: [
+    "images/uzbechka1.jpg",
+    "images/uzbechka2.jpg"
+],
+      address_ru: 'ул. Куйбышева, 67/1',
+      address_en: '67/1 Kuybysheva St.',
+      desc_ru: 'Узбекская и турецкая кухня. Сытные блюда, большие порции. Бесплатный Wi‑Fi.',
+      desc_en: 'Uzbek & Turkish cuisine. Hearty dishes, generous portions. Free Wi‑Fi.',
+      price_ru: '~300–500 ₽',
+      price_en: '~300–500 RUB',
+      hours_ru: 'Уточняйте на месте',
+      hours_en: 'Check on‑site'
+    },
+
+    {
+      name_ru: 'Кафе «Самобранка»',
+      name_en: 'Cafe «Samobranka»',
+      images: [
+    "images/samobranka1.jpg",
+    "images/samobranka2.jpg"
+],
+      address_ru: 'ул. Николая Островского, 15А',
+      address_en: '15A Nikolaya Ostrovskogo St.',
+      desc_ru: 'Уютная столовая с русскими и узбекскими блюдами. Салаты, супы, горячее, выпечка.',
+      desc_en: 'Cozy canteen with Russian & Uzbek dishes. Salads, soups, hot meals, pastries.',
+      price_ru: '~250 ₽ (обед)',
+      price_en: '~250 RUB (full meal)',
+      hours_ru: 'Пн–Пт 10:30–22:00, Сб–Вс выходной',
+      hours_en: 'Mon–Fri 10:30–22:00, Sat–Sun closed'
+    },
+
+    {
+      name_ru: 'Кафе «Ариран»',
+      name_en: 'Cafe «Ariran»',
+      images: [
+    "images/ariran3.png",
+    "images/ariran2.jpg"
+],
+      address_ru: 'ш. Космонавтов, 111Б',
+      address_en: '111b Kosmonavtov Shosse',
+      desc_ru: 'Корейская, китайская и узбекская кухня «собери сам»: лапша или рис + салаты. Терраса, бар, парковка.',
+      desc_en: 'Korean, Chinese & Uzbek «build‑your‑own»: noodles/rice + salads. Terrace, bar, parking.',
+      price_ru: '~300–500 ₽',
+      price_en: '~300–500 RUB',
+      hours_ru: 'Пн-Сб 10:00–18:00',
+      hours_en: 'Mon-Sat 10:00-18:00'
+    },
+
+    {
+      name_ru: 'Столовая «Минутка»',
+      name_en: 'Canteen «Minutka»',
+      images: [
+    "images/minutka3.jpg",
+    "images/minutka2.jpg"
+],
+      address_ru: 'ул. Луначарского, 3A',
+      address_en: '3A Lunacharskogo St.',
+      desc_ru: 'Лучшая столовая, где мы сами едим каждый день. Вкусно и очень дружелюбно.',
+      desc_en: 'The best canteen where we eat daily. Tasty and super friendly.',
+      price_ru: '~170–300 ₽',
+      price_en: '~170–300 RUB',
+      hours_ru: 'Пн-Пт 08:00–21:00; Сб-Вс 09:00–21:00',
+      hours_en: 'Mon-Fr 08:00–21:00; Sat-Sun 09:00–21:00'
+    },
+    
+    {
+      name_ru: 'Кафе «Китайская кухня»',
+      name_en: '«Chinese Cuisine» Cafe',
+      images: [
+    "images/pushkina china stolovaya.jpg"
+],
+      address_ru: 'ул. Пушкина, 104Б',
+      address_en: '104b Pushkina St.',
+      desc_ru: 'Атмосфера чайна‑тауна: вращающиеся столешницы, фото блюд на стенах, огромные порции.',
+      desc_en: 'Chinatown vibe: rotating tabletops, food photos on walls, huge portions.',
+      price_ru: '~250–450 ₽',
+      price_en: '~250–450 RUB',
+      hours_ru: 'Пн-Вс 10:00-22:00',
+      hours_en: 'Mon-S 10:00-22:00'
+    }
+  ];
+
+  // ----- Рендер карточек -----
+function renderPlaces(lang) {
+  const grid = document.getElementById('placesGrid');
+  grid.innerHTML = '';
+
+  placesData.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'place-card';
+
+    card.innerHTML = `
+      <div class="place-image">
+        <img src="${p.images[0]}" alt="${lang === 'ru' ? p.name_ru : p.name_en}">
+      </div>
+
+      <h3>
+        <i class="fas fa-store"></i>
+        ${lang === 'ru' ? p.name_ru : p.name_en}
+      </h3>
+
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
+        ${lang === 'ru' ? p.address_ru : p.address_en}
+      </div>
+
+      <div class="desc">
+        ${lang === 'ru' ? p.desc_ru : p.desc_en}
+      </div>
+
+      <div class="meta">
+        <span>
+          <i class="fas fa-tag"></i>
+          <span class="price">
+            ${lang === 'ru' ? p.price_ru : p.price_en}
+          </span>
+        </span>
+
+        <span>
+          <i class="far fa-clock"></i>
+          ${lang === 'ru' ? p.hours_ru : p.hours_en}
+        </span>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+  // ----- Переключение языка -----
+  let currentLang = 'ru';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      const text = el.getAttribute('data-lang');
+      if (text === lang) {
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+    renderPlaces(lang);
+    const toggle = document.getElementById('langToggle');
+    if (lang === 'ru') {
+      toggle.innerHTML = '<i class="fas fa-globe"></i> EN';
+    } else {
+      toggle.innerHTML = '<i class="fas fa-globe"></i> RU';
+    }
+    document.documentElement.lang = lang;
+    localStorage.setItem('preferredLang', lang);
+  }
+
+  const savedLang = localStorage.getItem('preferredLang') || 'ru';
+  setLanguage(savedLang);
+
+  document.getElementById('langToggle').addEventListener('click', function() {
+    setLanguage(currentLang === 'ru' ? 'en' : 'ru');
+  });
+
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
